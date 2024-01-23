@@ -1,0 +1,114 @@
+<allegro>
+<geom pos="0.0425 -0.0425 0" quat="-0.707107 0 0.707107 0" type="mesh"  group="1" rgba="0.2 0.2 0.2 1" mesh="allegro_mount" material="allegro_mount_mat"/>
+<!--        <geom size="0.0005 0.0005 0.0005" pos="0.0425 0 0.0425" quat="-0.707107 0 0.707107 0" type="box" rgba="0.2 0.2 0.2 1" />-->
+        <geom pos="0.015 0 0.1075" quat="-1 0 0 0" type="mesh" group="1" rgba="0.2 0.2 0.2 1" mesh="base_link" material="hand_mat" />
+<!--        <geom size="0.0204 0.0565 0.0475" pos="0.0057 0 0.06" quat="-1 0 0 0" type="box" rgba="0.2 0.2 0.2 1" />-->
+        <body name="link_0" pos="0.015 0.0435 0.105958" quat="-0.999048 0.0436194 0 0">
+            <inertial pos="0 0 0" quat="0.707107 0.707107 0 0" mass="0.0119" diaginertia="1.01667e-06 1.01667e-06 6.47677e-07" />
+            <joint class="hand_joint" name="index_joint_0" pos="0 0 0" axis="0 0 1" limited="true" range="-0.47 0.47" />
+            <geom type="mesh" group="1" rgba="0.2 0.2 0.2 1" mesh="link_0.0" material="hand_mat"/>
+<!--            <geom size="0.0098 0.01375 0.0082" pos="0 0 0.0082" type="box" rgba="0.2 0.2 0.2 1" />-->
+            <body name="link_1" pos="0 0 0.0164">
+                <inertial pos="0 0 0" quat="0.702596 0.559386 -0.178354 0.402039" mass="0.065" diaginertia="6.12799e-05 6.12799e-05 6.12799e-05" />
+                <joint class="hand_joint" name="index_joint_1" pos="0 0 0" axis="0 1 0" limited="true" range="-0.196 1.61" />
+                <geom type="mesh" group="1" rgba="0.2 0.2 0.2 1" mesh="link_1.0" material="hand_mat"/>
+<!--                <geom size="0.0098 0.01375 0.027" pos="0 0 0.027" type="box" rgba="0.2 0.2 0.2 1" />-->
+                <body name="link_2" pos="0 0 0.054">
+                    <inertial pos="0 0 0" quat="0.719796 0.528175 -0.157463 0.422055" mass="0.0355" diaginertia="2.20969e-05 2.20969e-05 2.20969e-05" />
+                    <joint class="hand_joint" name="index_joint_2" pos="0 0 0" axis="0 1 0" limited="true" range="-0.174 1.709" />
+                    <geom type="mesh" group="1" rgba="0.2 0.2 0.2 1" mesh="link_2.0" material="hand_mat"/>
+<!--                    <geom size="0.0098 0.01375 0.0192" pos="0 0 0.0192" type="box" rgba="0.2 0.2 0.2 1" />-->
+                    <body name="link_3" pos="0 0 0.0384">
+                        <inertial pos="0 0 0.0169909" mass="0.0264" diaginertia="9.67371e-06 9.67371e-06 5.3186e-06" />
+                        <joint class="hand_joint" name="index_joint_3" pos="0 0 0" axis="0 1 0" limited="true" range="-0.227 1.618"  />
+                        <geom type="mesh" group="1" rgba="0.2 0.2 0.2 1" mesh="link_3.0" material="hand_mat"/>
+<!--                        <geom size="0.0098 0.01375 0.01335" pos="0 0 0.01335" type="box" rgba="0.2 0.2 0.2 1" />-->
+                        <geom pos="0 0 0.0267" type="mesh" group="1" rgba="0.9 0.9 0.9 1" mesh="link_3.0_tip" material="tip_mat"/>
+<!--                        <geom size="0.012" pos="0 0 0.0267" rgba="0.9 0.9 0.9 1" />-->
+                        <site name="index_site" pos="0 0 0.0267" euler="0 0 0" size="0.005  0.005 0.005"/>
+                    </body>
+                </body>
+            </body>
+        </body>
+        <body name="link_4" pos="0.015 0 0.1082" quat="-1 0 0 0">
+            <inertial pos="0 0 0" quat="0.707107 0.707107 0 0" mass="0.0119" diaginertia="1.01667e-06 1.01667e-06 6.47677e-07" />
+            <joint class="hand_joint" name="middle_joint_0" pos="0 0 0" axis="0 0 1" limited="true" range="-0.47 0.47" />
+            <geom type="mesh" group="1" rgba="0.2 0.2 0.2 1" mesh="link_0.0" material="hand_mat"/>
+<!--            <geom size="0.0098 0.01375 0.0082" pos="0 0 0.0082" type="box" rgba="0.2 0.2 0.2 1" />-->
+            <body name="link_5" pos="0 0 0.0164">
+                <inertial pos="0 0 0" quat="0.702596 0.559386 -0.178354 0.402039" mass="0.065" diaginertia="6.12799e-05 6.12799e-05 6.12799e-05" />
+                <joint class="hand_joint" name="middle_joint_1" pos="0 0 0" axis="0 1 0" limited="true" range="-0.196 1.61" />
+                <geom type="mesh" group="1" rgba="0.2 0.2 0.2 1" mesh="link_1.0" material="hand_mat"/>
+<!--                <geom size="0.0098 0.01375 0.027" pos="0 0 0.027" type="box" rgba="0.2 0.2 0.2 1" />-->
+                <body name="link_6" pos="0 0 0.054">
+                    <inertial pos="0 0 0" quat="0.719796 0.528175 -0.157463 0.422055" mass="0.0355" diaginertia="2.20969e-05 2.20969e-05 2.20969e-05" />
+                    <joint class="hand_joint" name="middle_joint_2" pos="0 0 0" axis="0 1 0" limited="true" range="-0.174 1.709" />
+                    <geom type="mesh" group="1" rgba="0.2 0.2 0.2 1" mesh="link_2.0" material="hand_mat"/>
+<!--                    <geom size="0.0098 0.01375 0.0192" pos="0 0 0.0192" type="box" rgba="0.2 0.2 0.2 1" />-->
+                    <body name="link_7" pos="0 0 0.0384">
+                        <inertial pos="0 0 0.0169909" mass="0.0264" diaginertia="9.67371e-06 9.67371e-06 5.3186e-06" />
+                        <joint class="hand_joint" name="middle_joint_3" pos="0 0 0" axis="0 1 0" limited="true" range="-0.227 1.618"  />
+                        <geom type="mesh" group="1" rgba="0.2 0.2 0.2 1" mesh="link_3.0" material="hand_mat"/>
+<!--                        <geom size="0.0098 0.01375 0.01335" pos="0 0 0.01335" type="box" rgba="0.2 0.2 0.2 1" />-->
+                        <geom pos="0 0 0.0267" type="mesh" group="1" rgba="0.9 0.9 0.9 1" mesh="link_3.0_tip" material="tip_mat"/>
+<!--                        <geom size="0.012" pos="0 0 0.0267" rgba="0.9 0.9 0.9 1" />-->
+                        <site name="middle_site" pos="0 0 0.0267" euler="0 0 0" size="0.005  0.005 0.005"/>
+                    </body>
+                </body>
+            </body>
+        </body>
+        <body name="link_8" pos="0.015 -0.0435 0.105958" quat="-0.999048 -0.0436194 0 0">
+            <inertial pos="0 0 0" quat="0.707107 0.707107 0 0" mass="0.0119" diaginertia="1.01667e-06 1.01667e-06 6.47677e-07" />
+            <joint class="hand_joint" name="ring_joint_0" pos="0 0 0" axis="0 0 1" limited="true" range="-0.47 0.47" />
+            <geom type="mesh" group="1" rgba="0.2 0.2 0.2 1" mesh="link_0.0" material="hand_mat"/>
+<!--            <geom size="0.0098 0.01375 0.0082" pos="0 0 0.0082" type="box" rgba="0.2 0.2 0.2 1" />-->
+            <body name="link_9" pos="0 0 0.0164">
+                <inertial pos="0 0 0" quat="0.702596 0.559386 -0.178354 0.402039" mass="0.065" diaginertia="6.12799e-05 6.12799e-05 6.12799e-05" />
+                <joint class="hand_joint" name="ring_joint_1" pos="0 0 0" axis="0 1 0" limited="true" range="-0.196 1.61" />
+                <geom type="mesh" group="1" rgba="0.2 0.2 0.2 1" mesh="link_1.0" material="hand_mat"/>
+<!--                <geom size="0.0098 0.01375 0.027" pos="0 0 0.027" type="box" rgba="0.2 0.2 0.2 1" />-->
+                <body name="link_10" pos="0 0 0.054">
+                    <inertial pos="0 0 0" quat="0.719796 0.528175 -0.157463 0.422055" mass="0.0355" diaginertia="2.20969e-05 2.20969e-05 2.20969e-05" />
+                    <joint class="hand_joint" name="ring_joint_2" pos="0 0 0" axis="0 1 0" limited="true" range="-0.174 1.709" />
+                    <geom type="mesh" group="1" rgba="0.2 0.2 0.2 1" mesh="link_2.0" material="hand_mat"/>
+<!--                    <geom size="0.0098 0.01375 0.0192" pos="0 0 0.0192" type="box" rgba="0.2 0.2 0.2 1" />-->
+                    <body name="link_11" pos="0 0 0.0384">
+                        <inertial pos="0 0 0.0169909" mass="0.0264" diaginertia="9.67371e-06 9.67371e-06 5.3186e-06" />
+                        <joint class="hand_joint" name="ring_joint_3" pos="0 0 0" axis="0 1 0" limited="true" range="-0.227 1.618"  />
+                        <geom type="mesh" group="1" rgba="0.2 0.2 0.2 1" mesh="link_3.0" material="hand_mat"/>
+<!--                        <geom size="0.0098 0.01375 0.01335" pos="0 0 0.01335" type="box" rgba="0.2 0.2 0.2 1" />-->
+                        <geom pos="0 0 0.0267" type="mesh" group="1" rgba="0.9 0.9 0.9 1" mesh="link_3.0_tip" material="tip_mat"/>
+<!--                        <geom size="0.012" pos="0 0 0.0267" rgba="0.9 0.9 0.9 1" />-->
+                        <site name="ring_site" pos="0 0 0.0267" euler="0 0 0" size="0.005  0.005 0.005"/>
+                    </body>
+                </body>
+            </body>
+        </body>
+        <body name="link_12" pos="-0.0032 0.019333 0.061513" quat="0.47771442  0.5213338 -0.5213338  0.47771442">
+            <inertial pos="0 0 0" quat="0.692635 0.569362 -0.07143 0.437013" mass="0.0176" diaginertia="1.73852e-05 1.73852e-05 1.73852e-05" />
+            <joint class="hand_joint" name="thumb_joint_0" pos="0 0 0" axis="-1 0 0" limited="true" range="0.263 1.596" />
+            <geom quat="8.94897e-10 1 0 0" type="mesh" group="1" contype="0" conaffinity="0" rgba="0.2 0.2 0.2 1" mesh="link_12.0_right" material="hand_mat"/>
+<!--            <geom size="0.0179 0.017 0.02275" pos="-0.0179 0.009 0.0145" type="box" rgba="0.2 0.2 0.2 1" />-->
+            <body name="link_13" pos="-0.027 -0.005 -0.0399" quat="1.32679e-06 0 1 0">
+                <inertial pos="0 0 0" quat="-0.0269589 0.880876 0.334036 0.334292" mass="0.0119" diaginertia="4.33621e-06 4.33621e-06 4.33621e-06" />
+                <joint class="hand_joint" name="thumb_joint_1" pos="0 0 0" axis="0 0 1" limited="true" range="-0.105 1.163" />
+                <geom type="mesh" group="1" rgba="0.2 0.2 0.2 1" mesh="link_13.0" material="hand_mat"/>
+<!--                <geom size="0.0098 0.01375 0.00885" pos="0 0 0.00885" type="box" rgba="0.2 0.2 0.2 1" />-->
+                <body name="link_14" pos="0 0 0.0177">
+                    <inertial pos="0 0 0" quat="0.70472 0.55555 -0.174905 0.405146" mass="0.038" diaginertia="3.35111e-05 3.35111e-05 3.35111e-05" />
+                    <joint class="hand_joint" name="thumb_joint_2" pos="0 0 0" axis="0 -1 0" limited="true" range="-0.189 1.644" />
+                    <geom type="mesh" group="1" rgba="0.2 0.2 0.2 1" mesh="link_14.0" material="hand_mat"/>
+<!--                    <geom size="0.0098 0.01375 0.0257" pos="0 0 0.0257" type="box" rgba="0.2 0.2 0.2 1" />-->
+                    <body name="link_15" pos="0 0 0.0514">
+                        <inertial pos="0 0 0.0127813" quat="0.707107 0 0 0.707107" mass="0.0556" diaginertia="4.88098e-05 4.88098e-05 2.78326e-05" />
+                        <joint class="hand_joint" name="thumb_joint_3" pos="0 0 0" axis="0 -1 0" limited="true" range="-0.162 1.719" />
+                        <geom type="mesh" group="1" rgba="0.2 0.2 0.2 1" mesh="link_15.0" material="hand_mat"/>
+<!--                        <geom size="0.0098 0.01375 0.02115" pos="0 0 0.02115" type="box" rgba="0.2 0.2 0.2 1" />-->
+                        <geom pos="0 0 0.0423" type="mesh" group="1" rgba="0.9 0.9 0.9 1" mesh="link_15.0_tip" material="tip_mat"/>
+<!--                        <geom size="0.012" pos="0 0 0.0423" rgba="0.9 0.9 0.9 1" />-->
+                        <site name="thumb_site" pos="0 0 0.0423" euler="0 0 0" size="0.005  0.005 0.005"/>
+                    </body>
+                </body>
+            </body>
+        </body>
+</allegro>

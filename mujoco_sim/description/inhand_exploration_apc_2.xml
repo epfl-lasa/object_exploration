@@ -1,0 +1,139 @@
+<mujoco model="iiwa7">
+    <compiler angle="radian" meshdir="" />
+    <size njmax="500" nconmax="100" />
+
+    <option>
+    <flag gravity="enable"/>
+  </option>
+
+  <include file="allegro/allegro_preloads.xml"/>
+    <include file="objs/apc_2_preloads.xml"/>
+
+
+
+    <asset>
+        <mesh name="link_0" file="iiwa7/link_0.stl" />
+        <mesh name="c_link_0" file="iiwa7/c_link_0.stl" />
+        <mesh name="link_1" file="iiwa7/link_1.stl" />
+        <mesh name="c_link_1" file="iiwa7/c_link_1.stl" />
+        <mesh name="link_2" file="iiwa7/link_2.stl" />
+        <mesh name="c_link_2" file="iiwa7/c_link_2.stl" />
+        <mesh name="link_3" file="iiwa7/link_3.stl" />
+        <mesh name="c_link_3" file="iiwa7/c_link_3.stl" />
+        <mesh name="link_4" file="iiwa7/link_4.stl" />
+        <mesh name="c_link_4" file="iiwa7/c_link_4.stl" />
+        <mesh name="link_5" file="iiwa7/link_5.stl" />
+        <mesh name="c_link_5" file="iiwa7/c_link_5.stl" />
+        <mesh name="link_6" file="iiwa7/link_6.stl" />
+        <mesh name="c_link_6" file="iiwa7/c_link_6.stl" />
+        <mesh name="link_7" file="iiwa7/link_7.stl" />
+        <mesh name="c_link_7" file="iiwa7/c_link_7.stl" />
+        <mesh name="apc_2" file="objs/apc_2_small.stl"/>
+    </asset>
+    <worldbody>
+        <light pos="0 0 1000" castshadow="false"/>
+        <geom name="floor" class="visual" pos="0 0 0" type="plane" size="10 10 1" rgba=".8 .8 .8 1"/>
+        <body name="kuka_table" pos="-1 0 0.25">
+          <geom name="kuka_table" class="collision" type="box" size=".125 .125 .25" pos="0 0 0" rgba="0.4 0.4 0.4 0"/>
+          <body name="kuka_base" pos="0 0 0.25">
+            <geom type="mesh" contype="0" conaffinity="0" group="1" rgba="0.4 0.4 0.4 0" mesh="link_0" />
+            <geom name="kuka_base" type="mesh" rgba="0.4 0.4 0.4 0" mesh="c_link_0" />
+            <body name="iiwa_link_1" pos="0 0 0.15">
+                <inertial pos="0 -0.03 0.12" quat="0.428904 0.562175 -0.562175 0.428904" mass="3.4525" diaginertia="0.0218946 0.02183 0.00663837" />
+                <joint name="iiwa_joint_1" pos="0 0 0" axis="0 0 1" limited="true" range="-2.96706 2.96706" damping="0.5" />
+                <geom pos="0 0 0.0075" type="mesh" contype="0" conaffinity="0" group="1" rgba="1 0.423529 0.0392157 0" mesh="link_1" />
+                <geom name="iiwa_link_1" pos="0 0 0.0075" type="mesh" rgba="1 0.423529 0.0392157 0" mesh="c_link_1" />
+                <body name="iiwa_link_2" pos="0 0 0.19" quat="0 0 0.707107 0.707107">
+                    <inertial pos="0.0003 0.059 0.042" quat="0.701371 0.0898824 0.0898824 0.701371" mass="3.4821" diaginertia="0.02179 0.0217049 0.00684512" />
+                    <joint name="iiwa_joint_2" pos="0 0 0" axis="0 0 1" limited="true" range="-2.0944 2.0944" damping="0.5" />
+                    <geom type="mesh" contype="0" conaffinity="0" group="1" rgba="1 0.423529 0.0392157 0" mesh="link_2" />
+                    <geom name="iiwa_link_2" type="mesh" rgba="1 0.423529 0.0392157 0" mesh="c_link_2" />
+                    <body name="iiwa_link_3" pos="0 0.21 0" quat="0 0 0.707107 0.707107">
+                        <inertial pos="0 0.03 0.13" quat="0.56292 0.427927 -0.427927 0.56292" mass="4.05623" diaginertia="0.0321488 0.03204 0.00799117" />
+                        <joint name="iiwa_joint_3" pos="0 0 0" axis="0 0 1" limited="true" range="-2.96706 2.96706" damping="0.5" />
+                        <geom pos="0 0 -0.026" type="mesh" contype="0" conaffinity="0" group="1" rgba="1 0.423529 0.0392157 0" mesh="link_3" />
+                        <geom name="iiwa_link_3" pos="0 0 -0.026" type="mesh" rgba="1 0.423529 0.0392157 0" mesh="c_link_3" />
+                        <body name="iiwa_link_4" pos="0 0 0.19" quat="0.707107 0.707107 0 0">
+                            <inertial pos="0 0.067 0.034" quat="0.991887 -0.127124 0 0" mass="3.4822" diaginertia="0.02178 0.0216947 0.00684029" />
+                            <joint name="iiwa_joint_4" pos="0 0 0" axis="0 0 1" limited="true" range="-2.0944 2.0944" damping="0.5" />
+                            <geom type="mesh" contype="0" conaffinity="0" group="1" rgba="1 0.423529 0.0392157 0" mesh="link_4" />
+                            <geom name="iiwa_link_4" type="mesh" rgba="1 0.423529 0.0392157 0" mesh="c_link_4" />
+                            <body name="iiwa_link_5" pos="0 0.21 0" quat="0 0 0.707107 0.707107">
+                                <inertial pos="0.0001 0.021 0.076" quat="0.365352 0.605407 -0.605407 0.365352" mass="2.1633" diaginertia="0.0131987 0.01287 0.0036293" />
+                                <joint name="iiwa_joint_5" pos="0 0 0" axis="0 0 1" limited="true" range="-2.96706 2.96706" damping="0.5" />
+                                <geom pos="0 0 -0.026" type="mesh" contype="0" conaffinity="0" group="1" rgba="1 0.423529 0.0392157 0" mesh="link_5" />
+                                <geom name="iiwa_link_5" pos="0 0 -0.026" type="mesh" rgba="1 0.423529 0.0392157 0" mesh="c_link_5" />
+                                <body name="iiwa_link_6" pos="0 0.0607 0.19" quat="0.707107 0.707107 0 0">
+                                    <inertial pos="0 0.0006 0.0004" quat="0.996112 0.088097 0 0" mass="2.3466" diaginertia="0.006509 0.00631585 0.00447015" />
+                                    <joint name="iiwa_joint_6" pos="0 0 0" axis="0 0 1" limited="true" range="-2.0944 2.0944" damping="0.5" />
+                                    <geom type="mesh" contype="0" conaffinity="0" group="1" rgba="1 0.423529 0.0392157 0" mesh="link_6" />
+                                    <geom name="iiwa_link_6" type="mesh" rgba="1 0.423529 0.0392157 0" mesh="c_link_6" />
+                                    <body name="iiwa_link_7" pos="0 0.081 0.0607" quat="0 0 0.707107 0.707107">
+                                        <inertial pos="0 0 0.02" quat="0.923068 0 0 0.384636" mass="3.129" diaginertia="1.01524 1.01405 1.00287" />
+                                        <joint name="iiwa_joint_7" pos="0 0 0" axis="0 0 1" limited="true" range="-3.05433 3.05433" damping="0.5" />
+                                        <geom pos="0 0 -0.0005" type="mesh" contype="0" conaffinity="0" group="1" rgba="0.4 0.4 0.4 0" mesh="link_7" />
+                                        <geom name="iiwa_link_7" pos="0 0 -0.0005" type="mesh" rgba="0.4 0.4 0.4 0" mesh="c_link_7" />
+<!--                                        <site name="ee_site" pos="0 0 0.0445" euler="0 0 0" size="0.005, 0.005, 0.005"/>-->
+<!--                                            <body name="allegro_base" euler="0 0 0" pos="0 0 0.0445">-->
+<!--                                                <include file="allegro/allegro_left_bodies.xml"/>-->
+<!--                                            </body>-->
+                                        <camera pos="0.1 0 0" euler="3.14159265359 0 -1.57079632679"/>
+                                    </body>
+                                </body>
+                            </body>
+                        </body>
+                    </body>
+                </body>
+            </body>
+         </body>
+         </body>
+         <body name="allegro_base" mocap="true" quat=" 0.5 -0.5  0.5  0.5" pos="0 0 0.3">
+<!--  <freejoint/>-->
+               <include file="allegro/allegro_left_bodies.xml"/>
+         </body>
+
+<!--         <include file="table_obj.xml"/>-->
+
+        <body name="apc_2" euler="0 0 0" pos="0.0013   0.0025   0.0838">
+             <include file="objs/apc_2_bodies.xml"/>
+            <geom pos="0 0 0" class="visual" name="apc_2_"  type="mesh" rgba="1 0.423529 0.0392157 1" mesh="apc_2" />
+         </body>
+
+    </worldbody>
+
+
+  <actuator>
+      <motor name="iiwa_joint_1" ctrllimited="true" ctrlrange="-300.0 300.0" joint="iiwa_joint_1"/>
+      <motor name="iiwa_joint_2" ctrllimited="true" ctrlrange="-300.0 300.0" joint="iiwa_joint_2"/>
+      <motor name="iiwa_joint_3" ctrllimited="true" ctrlrange="-300.0 300.0" joint="iiwa_joint_3"/>
+      <motor name="iiwa_joint_4" ctrllimited="true" ctrlrange="-300.0 300.0" joint="iiwa_joint_4"/>
+      <motor name="iiwa_joint_5" ctrllimited="true" ctrlrange="-300.0 300.0" joint="iiwa_joint_5"/>
+      <motor name="iiwa_joint_6" ctrllimited="true" ctrlrange="-300.0 300.0" joint="iiwa_joint_6"/>
+      <motor name="iiwa_joint_7" ctrllimited="true" ctrlrange="-300.0 300.0" joint="iiwa_joint_7"/>
+
+      <motor name="thumb_joint_0" ctrllimited="true" ctrlrange="-15 15" joint="thumb_joint_0"/>
+      <motor name="thumb_joint_1" ctrllimited="true" ctrlrange="-15 15" joint="thumb_joint_1"/>
+      <motor name="thumb_joint_2" ctrllimited="true" ctrlrange="-15 15" joint="thumb_joint_2"/>
+      <motor name="thumb_joint_3" ctrllimited="true" ctrlrange="-15 15" joint="thumb_joint_3"/>
+      <motor name="index_joint_0" ctrllimited="true" ctrlrange="-15 15" joint="index_joint_0"/>
+      <motor name="index_joint_1" ctrllimited="true" ctrlrange="-15 15" joint="index_joint_1"/>
+      <motor name="index_joint_2" ctrllimited="true" ctrlrange="-15 15" joint="index_joint_2"/>
+      <motor name="index_joint_3" ctrllimited="true" ctrlrange="-15 15" joint="index_joint_3"/>
+      <motor name="middle_joint_0" ctrllimited="true" ctrlrange="-15 15" joint="middle_joint_0"/>
+      <motor name="middle_joint_1" ctrllimited="true" ctrlrange="-15 15" joint="middle_joint_1"/>
+      <motor name="middle_joint_2" ctrllimited="true" ctrlrange="-15 15" joint="middle_joint_2"/>
+      <motor name="middle_joint_3" ctrllimited="true" ctrlrange="-15 15" joint="middle_joint_3"/>
+
+      <motor name="ring_joint_0" ctrllimited="true" ctrlrange="-15 15" joint="ring_joint_0"/>
+      <motor name="ring_joint_1" ctrllimited="true" ctrlrange="-15 15" joint="ring_joint_1"/>
+      <motor name="ring_joint_2" ctrllimited="true" ctrlrange="-15 15" joint="ring_joint_2"/>
+      <motor name="ring_joint_3" ctrllimited="true" ctrlrange="-15 15" joint="ring_joint_3"/>
+
+  </actuator>
+
+    <contact>
+		<exclude body1="kuka_base" body2="iiwa_link_1"/>
+
+	</contact>
+
+</mujoco>

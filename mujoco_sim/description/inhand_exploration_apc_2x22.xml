@@ -1,0 +1,66 @@
+<mujoco model="iiwa7">
+    <compiler angle="radian" meshdir="" />
+    <size njmax="500" nconmax="100" />
+
+<!--     <option integrator="RK4" timestep="0.001"/>-->
+<!--     <option integrator="RK4" timestep="0.002"  solver="PGS" iterations="1000"/>-->
+    <option>
+    <flag gravity="enable"/>
+  </option>
+
+  <include file="allegro/allegro_preloads.xml"/>
+    <include file="objs/apc_2x2_preloads.xml"/>
+
+
+    <asset>
+        <mesh name="apc_2x2" file="objs/apc_2x2.stl" />
+    </asset>
+    <worldbody>
+        <light pos="0 0 1000" castshadow="false"/>
+        <geom name="floor" class="visual" pos="0 0 0" type="plane" size="10 10 1" rgba=".8 .8 .8 0.5"/>
+
+        <body name="allegro_base_mocap" mocap="true" euler="0 0 0" pos="0 0 1">
+         </body>
+
+         <body name="allegro_base"  euler="0 0 0" pos="0 0 1">
+             <freejoint/>
+             <site name="ee_site" pos="0 0 0" euler="0 0 0" size="0.005, 0.005, 0.005"/>
+               <include file="allegro/allegro_left_bodies.xml"/>
+         </body>
+
+            <!-- position offset is equal to 'plyFiles2PointCloud('apc_2x2')', and run -2 * offset  -->
+        <body name="apc_2x2" euler="0 0 0" pos="0.0025    0.0049    0.1676">
+             <include file="objs/apc_2x2_bodies.xml"/>
+            <geom pos="0 0 0" class="visual" name="apc_2x2"  type="mesh" rgba="1 0.423529 0.0392157 0.5" mesh="apc_2x2" />
+         </body>
+
+    </worldbody>
+
+    <equality>
+<!--        <weld body1="allegro_base_mocap" body2="allegro_base" solref="0.005 4"/>-->
+        <weld body1="allegro_base_mocap" body2="allegro_base" solref="0.005 8"/>
+    </equality>
+
+  <actuator>
+      <motor name="thumb_joint_0" ctrllimited="true" ctrlrange="-15 15" joint="thumb_joint_0"/>
+      <motor name="thumb_joint_1" ctrllimited="true" ctrlrange="-15 15" joint="thumb_joint_1"/>
+      <motor name="thumb_joint_2" ctrllimited="true" ctrlrange="-15 15" joint="thumb_joint_2"/>
+      <motor name="thumb_joint_3" ctrllimited="true" ctrlrange="-15 15" joint="thumb_joint_3"/>
+      <motor name="index_joint_0" ctrllimited="true" ctrlrange="-15 15" joint="index_joint_0"/>
+      <motor name="index_joint_1" ctrllimited="true" ctrlrange="-15 15" joint="index_joint_1"/>
+      <motor name="index_joint_2" ctrllimited="true" ctrlrange="-15 15" joint="index_joint_2"/>
+      <motor name="index_joint_3" ctrllimited="true" ctrlrange="-15 15" joint="index_joint_3"/>
+      <motor name="middle_joint_0" ctrllimited="true" ctrlrange="-15 15" joint="middle_joint_0"/>
+      <motor name="middle_joint_1" ctrllimited="true" ctrlrange="-15 15" joint="middle_joint_1"/>
+      <motor name="middle_joint_2" ctrllimited="true" ctrlrange="-15 15" joint="middle_joint_2"/>
+      <motor name="middle_joint_3" ctrllimited="true" ctrlrange="-15 15" joint="middle_joint_3"/>
+
+      <motor name="ring_joint_0" ctrllimited="true" ctrlrange="-15 15" joint="ring_joint_0"/>
+      <motor name="ring_joint_1" ctrllimited="true" ctrlrange="-15 15" joint="ring_joint_1"/>
+      <motor name="ring_joint_2" ctrllimited="true" ctrlrange="-15 15" joint="ring_joint_2"/>
+      <motor name="ring_joint_3" ctrllimited="true" ctrlrange="-15 15" joint="ring_joint_3"/>
+
+  </actuator>
+
+
+</mujoco>

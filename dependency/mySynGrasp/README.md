@@ -1,0 +1,2 @@
+# SynGrasp 2.3
+This Matlab toolbox was tested with Matlab R2019b. To use it just download this project as zip file and extract it. Then, after opening Matlab, in the window "Current Folder" select the previously created SynGrasp folder and run SGintall.m. It will add the paths of all necesssary folders to your working path. Now you can run the exmples or vist http://sirslab.diism.unisi.it/syngrasp/ for more information and to download the user guide.

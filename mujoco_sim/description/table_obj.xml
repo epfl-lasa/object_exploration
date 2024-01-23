@@ -1,0 +1,11 @@
+<objects>
+<!--    <body name="grasping_table" pos="0.8 0 0.5">-->
+<!--          <geom name="grasping_table" class="collision" type="box" size="0.3 0.6 0.5" pos="0 0 0" mass="10"/>-->
+<!--    </body>-->
+
+<!--  add the objects to be explored   -->
+        <body name="apc_2" pos="0 0 1" quat="1 0. 0. 0.">
+            <geom name="obj"  type="mesh" rgba="1 0.423529 0.0392157 1" mesh="apc_2" />
+        </body>
+
+</objects>

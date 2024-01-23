@@ -1,0 +1,33 @@
+<mujoco model="apc_red_bowlx2">
+    <compiler angle="radian" meshdir="" />
+    <size njmax="500" nconmax="100" />
+
+<!--    <include file="objs/apc_red_bowlx2_preloads.xml"/>-->
+    <include file="objs/bunnyx2_preloads.xml"/>
+
+<!--    <asset>-->
+<!--&lt;!&ndash;        <mesh name="apc_red_bowlx2" file="objs/apc_red_bowlx2/apc_red_bowlx2.stl"/>&ndash;&gt;-->
+<!--        <mesh name="apc_red_bowlx2" file="objs/apc_red_bowlx2/apc_red_bowlx2.stl"/>-->
+<!--    </asset>-->
+
+    <default>
+        <default class="visual">
+          <geom contype="0" conaffinity="0"/>
+        </default>
+      <default class="obj_pieces">
+           <geom contype="1" conaffinity="1" friction="1 0 0.001" solref="0.02  2" rgba="0.7 0 0 1" />
+      </default>
+    </default>
+
+    <worldbody>
+         <light pos="0 0 1000" castshadow="false"/>
+        <geom name="floor" class="visual" pos="0 0 0" type="plane" size="10 10 1" rgba=".8 .8 .8 1"/>
+
+        <body name="obj_base" euler="0 0 0" pos="0 0 0.3">
+<!--             <include file="objs/apc_red_bowlx2_bodies.xml"/>-->
+             <include file="objs/bunnyx2_bodies.xml"/>
+<!--            <geom pos="0 0 0.00" class="visual" name="apc_2"  type="mesh" rgba="1 0.423529 0.0392157 1" mesh="apc_red_bowlx2" />-->
+
+         </body>
+    </worldbody>
+</mujoco>

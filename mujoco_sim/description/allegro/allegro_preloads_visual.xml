@@ -1,0 +1,67 @@
+<allegro>
+
+    <default>
+
+
+    <joint damping="0.01" frictionloss="0"/>
+    <default class="visual">
+      <geom contype="0" conaffinity="0"/>
+    </default>
+        <default class="visual1">
+      <geom contype="0" conaffinity="0"/>
+    </default>
+        <default class="visual2">
+     <geom contype="0" conaffinity="0"/>
+    </default>
+        <default class="visual3">
+     <<geom contype="0" conaffinity="0"/>
+    </default>
+        <default class="visual4">
+     <geom contype="0" conaffinity="0"/>
+    </default>
+        <default class="visual5">
+     <geom contype="0" conaffinity="0"/>
+    </default>
+
+    <default class="collision">
+      <geom contype="0" conaffinity="0" friction="0 0 0.001" solimp="1.1 1.2 0.001 0.5 2" solref="0.02 2" />
+    </default>
+            <default class="obj_pieces">
+           <geom contype="0" conaffinity="0" friction="0 0 0.001" solref="0.02  2" rgba="0.7 0 0 0" />
+      </default>
+
+<!--      <default class="1">-->
+<!--          <geom condim="1" friction="0.5 0.5 0.01"  solimp="1.1 1.2 0.001 0.5 2" solref="0.02 2"/>-->
+<!--      </default>-->
+    <site rgba="1 0 0 .5"/>
+  <geom solref=".004 1"/>
+  </default>
+
+   <asset>
+        <mesh name="allegro_mount" file="allegro/meshes/allegro_mount.stl" />
+        <mesh name="base_link" file="allegro/meshes/base_link.STL" />
+        <mesh name="link_0.0" file="allegro/meshes/link_0.0.STL" />
+        <mesh name="link_1.0" file="allegro/meshes/link_1.0.STL" />
+        <mesh name="link_2.0" file="allegro/meshes/link_2.0.STL" />
+        <mesh name="link_3.0" file="allegro/meshes/link_3.0.STL" />
+        <mesh name="link_3.0_tip" file="allegro/meshes/link_3.0_tip.STL" />
+        <mesh name="link_12.0_right" file="allegro/meshes/link_12.0_right.STL" />
+        <mesh name="link_13.0" file="allegro/meshes/link_13.0.STL" />
+        <mesh name="link_14.0" file="allegro/meshes/link_14.0.STL" />
+        <mesh name="link_15.0" file="allegro/meshes/link_15.0.STL" />
+        <mesh name="link_15.0_tip" file="allegro/meshes/link_15.0_tip.STL" />
+       <mesh name="base_link_left" file="allegro/meshes/base_link_left.STL" />
+        <mesh name="link_12.0_left" file="allegro/meshes/link_12.0_left.STL" />
+
+        <texture builtin="flat" name="allegro_mount_tex" height="32" width="32" rgb1="0.2 0.2 0.2" type="cube"/>
+     <texture builtin="flat" name="hand_tex" height="32" width="32" rgb1="0.2 0.2 0.2 " type="cube"/>
+     <texture builtin="flat" name="tip_tex" height="32" width="32" rgb1="0.9 0.9 0.9" type="cube"/>
+
+<!--     <material name="allegro_mount_mat" shininess="0.03" specular="0.75" texture="allegro_mount_tex"/>-->
+<!--     <material name="hand_mat" shininess="0.03" specular="0.75" texture="hand_tex"/>-->
+<!--    <material name="tip_mat" shininess="0.03" specular="0.75" texture="tip_tex"/>-->
+       <material name="allegro_mount_mat" shininess="0.03" specular="0.25"/>
+     <material name="hand_mat" shininess="0.03" specular="0.25" />
+    <material name="tip_mat" shininess="0.03" specular="0.25" />
+    </asset>
+</allegro>
